@@ -1,0 +1,33 @@
+@media (max-width: 375px) {
+    /* MOBILE */
+
+    #nav-bar{
+
+    }
+
+
+    .mobile-container {
+        max-width: 480px;
+        margin: auto;
+        background-color: #555;
+        height: 500px;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+  
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+}
+
+@media (max-width: 1440px) {
+    /*  DESKTOP  */
+
+
+}
