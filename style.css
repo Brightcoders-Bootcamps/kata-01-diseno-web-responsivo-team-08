@@ -43,16 +43,25 @@
       border-radius: 11px 11px 11px 11px;
     }
 
-    /* .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-  
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+    .title {
+      font: size 300%;
+      text-align: center;
+      align-content: center;
+      color: #2A2A28;
+      /*color: Gray:hsl(0, 0%, 75%);*/
       
-      */
+
+    }
+
+    .sub-title{
+      font-size: 95%;
+      text-align: center;
+      color:gray;
+      font-weight: normal;
+    }
+
+
+
 
 }
 
