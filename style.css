@@ -41,6 +41,18 @@
 
       }
 
+      .nav-bar_right a:hover{
+        background-color: black;
+        color:black
+      }
+
+      .active{
+        background-color: blue;
+        color: white;
+      }
+
+
+
 }
 
 @media (max-width: 1440px) {
