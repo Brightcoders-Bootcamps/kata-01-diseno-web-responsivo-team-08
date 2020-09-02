@@ -20,6 +20,7 @@
       font-size: 17px;
       display: block;
       color: white;
+      text-align: center;
     }
 
     .nav-bar a.icon {
@@ -43,30 +44,32 @@
       border-radius: 11px 11px 11px 11px;
     }
 
-    .title {
-      font: size 300%;
-      text-align: center;
-      align-content: center;
-      color: #2A2A28;
-      /*color: Gray:hsl(0, 0%, 75%);*/
-      
-
+    .btn-start {
+      background-color: #2bd1d1;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+      color: white;
+      border-radius: 96px 96px 96px 96px;
+      padding: 3% 35%;
+      align-items:center;
+      border: none;
     }
 
-    .sub-title{
-      font-size: 95%;
+    .attribution {
+      font-size: 11px;
       text-align: center;
-      color:gray;
-      font-weight: normal;
     }
 
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
 
-
+    
 
 }
 
 @media (max-width: 1440px) {
     /*  DESKTOP  */
-
 
 }
