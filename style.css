@@ -1,6 +1,10 @@
 @media (max-width: 375px) {
     /* MOBILE */
 
+    body{
+      font-family: 'Poppins', sans-serif;
+    }
+
     .nav-bar{
       overflow: hidden;
       position: relative;
@@ -15,6 +19,7 @@
       text-decoration: none;
       font-size: 17px;
       display: block;
+      color: white;
     }
 
     .nav-bar a.icon {
@@ -33,6 +38,11 @@
       color: white;
     }
 
+    .nav-bar_right {
+      background-color: #3a3053;
+      border-radius: 11px 11px 11px 11px;
+    }
+
     /* .attribution {
         font-size: 11px;
         text-align: center;
@@ -41,45 +51,8 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-
-      .nav-bar_right{
-        overflow: hidden;
-        background-color: hsl(257, 27%, 26%);
-        position: relative;
-      }
-
-      .nav-bar_right #nav_right{
-        display: none;
-      }
-
-      .nav-bar_right a{
-        color: aliceblue;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        display: block;
-      }
-
-      .nav-bar_right a.icon{
-        background: black;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-
-      }
-
-      .nav-bar_right a:hover{
-        background-color: black;
-        color:black
-      }
-
-      .active{
-        background-color: blue;
-        color: white;
-      } */
-
-
+      
+      */
 
 }
 
