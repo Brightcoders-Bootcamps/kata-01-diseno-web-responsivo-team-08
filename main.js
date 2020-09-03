@@ -1,8 +1,6 @@
-function myFunction() {
-    var x = document.getElementById("nav_right");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-}
+var burgerButtton = document.getElementById("navMenu");
+var navRight = document.getElementById("navRight");
+
+burgerButtton.addEventListener("click",function(){
+  navRight.classList.toggle("hidden");
+});
