@@ -147,6 +147,7 @@
       background-color: #eeeff4;
       display: flex;
       flex-direction: column;
+      padding-bottom: 25%;
     }
 
     .circle-card{
@@ -235,11 +236,22 @@
     #cards {
       display: flex;
       flex-direction: column;
+      padding-bottom: 15%;
+    }
+
+    .circle-card{
+      left: 20%;
+    }
+
+    .one-card {
+      padding: 40px 20px 20px 20px;
+      text-align: left;
+      height: 200px;
     }
 
     .vertical-line {
       width: 20px;
-      height: 3px;
+      height: 1px;
       background: #00caca;
     }
 
@@ -248,17 +260,29 @@
       flex-direction: row;
       position: relative;
     }
-
-    .one-card:first-child{
-      margin-top: 10px;
+    /* Card 1 */
+    .one-card:nth-child(1){
+      margin-top: 0px;
     }
 
-    .one-card:nth-child(2){
-      margin-top: 20px;
+    /* Linea 1 */
+    .vertical-line:nth-child(2){ 
+      margin-top: 100px;
     }
 
+    /* Card 2 */
     .one-card:nth-child(3){
-      margin-top: 30px;
+      margin-top: 50px;
+    }
+
+    /* Linea 2 */
+    .vertical-line:nth-child(4){
+      margin-top: 100px;
+    }
+
+     /* Card 3 */
+    .one-card:nth-child(5){
+      margin-top: 100px;
     }
     
 }
