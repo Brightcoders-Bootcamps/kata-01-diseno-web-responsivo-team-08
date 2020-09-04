@@ -145,6 +145,8 @@
 
     #cards {
       background-color: #eeeff4;
+      display: flex;
+      flex-direction: column;
     }
 
     .circle-card{
@@ -181,14 +183,6 @@
       min-height: 65px;
       background: #00caca;
     }
-
-    /* .one-card :nth-child(1){
-      margin-top:10
-    }
-
-    .one-card :nth-child(2){
-      margin-top:50
-    } */
 
     #get-started {
       color: white;
@@ -235,7 +229,36 @@
     }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1000px) {
     /*  DESKTOP  */
 
+    #cards {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vertical-line {
+      width: 20px;
+      height: 3px;
+      background: #00caca;
+    }
+
+    .direction-card {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+    }
+
+    .one-card:first-child{
+      margin-top: 10px;
+    }
+
+    .one-card:nth-child(2){
+      margin-top: 20px;
+    }
+
+    .one-card:nth-child(3){
+      margin-top: 30px;
+    }
+    
 }
