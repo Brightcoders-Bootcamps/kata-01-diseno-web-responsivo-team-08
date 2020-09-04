@@ -60,9 +60,18 @@
       text-align: center;
       align-content: center;
       border: none;
+      display:flex;
+      justify-content: center;
+          
     }
-    
 
+    .section-one{
+      display:flex;
+      justify-content: center;
+    }
+      
+      
+        
     .attribution {
       font-size: 11px;
       text-align: center;
@@ -73,18 +82,22 @@
     }
 
     .title {
-      font: size 300%;
+      font-size: 270%;
       text-align: center;
       align-content: center;
       color: #2A2A28;
+      padding:10px;
+      margin-block-end: 0em;
       /*color: Gray:hsl(0, 0%, 75%);*/
     }
 
     .sub-title{
-      font-size: 95%;
+      font-size: 120%;
       text-align: center;
       color:gray;
       font-weight: normal;
+      padding:10px;
+      margin-block-start: 0em;      
     }
 
     .link-here {
