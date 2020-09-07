@@ -53,7 +53,8 @@
     .btn-start {
       background-color: #2bd1d1;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 20px;
+      font-weight: bold;
       display: block;
       color: white;
       border-radius: 96px 96px 96px 96px;
@@ -70,7 +71,6 @@
       justify-content: center;
     }
       
-      
         
     .attribution {
       font-size: 11px;
@@ -80,6 +80,20 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
+    .container-image{
+      overflow: hidden;
+      width: 100vw;
+    }
+
+    .image-one{
+      margin-left: 15px;
+      width: auto;
+      height: 345px;
+      margin-top: 20px;
+      
+    }
+
 
     .title {
       font-size: 270%;
@@ -92,12 +106,16 @@
     }
 
     .sub-title{
-      font-size: 120%;
+      font-size: 117%;
       text-align: center;
-      color:gray;
+      color:rgb(158, 156, 156);
       font-weight: normal;
       padding:10px;
       margin-block-start: 0em;      
+    }
+
+    .btn-get{
+      padding: 7px 10px 7px 10px;
     }
 
     .link-here {
@@ -232,6 +250,32 @@
 
 @media (min-width: 1000px) {
     /*  DESKTOP  */
+
+    .call-action{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .image-one{
+      width: auto;
+      height: 435px;
+      margin-top: 20px;
+    }
+
+    .title{
+      text-align: left;
+      font-size: 60px;
+    }
+
+    .sub-title{
+      text-align: left;
+      font-size:20px;
+    }
+
+    .btn-get{
+      align-content: left;
+    }
+
 
     #cards {
       display: flex;
