@@ -140,7 +140,6 @@
       bottom: -46px;
       left: 50%;
       transform: translateX(-50%);
-      
     }
 
     .inner-div{
@@ -317,6 +316,47 @@
       align-content: left;
     }
 
+    .link-here {
+      width: 80%;
+      padding: 35px 10px;
+      background-image: url(images/bg-shorten-desktop.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #342a48;
+      border-radius: 10px;
+      position:relative;
+      text-align: center;
+      bottom: -46px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .inner-div form{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 0px 30px;
+    }
+
+    .link-here input{
+      padding: 0px 225px;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 10px;
+    }
+
+    .link-here button{
+      border-radius: 10px;
+      margin-block-start: 0em;
+      padding:15px 20px;
+      font-size: 17px
+    }
+
+    .link-here button:active{
+      border-radius: 10px;
+      margin-block-start: 0em;
+      padding:15px 20px;
+      font-size: 17px
+    }
 
     #cards {
       display: flex;

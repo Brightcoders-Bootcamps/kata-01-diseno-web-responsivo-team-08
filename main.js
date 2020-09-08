@@ -7,27 +7,29 @@ burgerButtton.addEventListener("click", function () {
   navRight.classList.toggle("hidden");
 });
 
-$('#Aceptar').submit(function (evento) {
+const form = document.getElementById('aceptar');
+
+form.addEventListener('submit', function (evento) {
   evento.preventDefault();
 
   console.log("Boton con evento");
   var link = document.getElementById("link").value;
   console.log(link);
-  $.ajax({
-    url: 'https://rel.ink/api/links/',
-    type: 'POST',
-    cache: false,
-    dataType: "json",
-    data: {
-      url: link
-    },
-    success: function (data) {
-      console.log(data);
-      //$("#tbAlertasArcos").html(datosArcos);
-    }, error: function (error) {
-      console.log("Aqui esta2");
-      console.log(error);
-    }
+
+  fetch('https://rel.ink/api/links/',{
+    method: 'POST',
+    headers: { 'Content-type': 'application/json' },
+    body: JSON.stringify({url: link}),
+    credentials: 'same-origin'
   })
+  .then((response) => response.json())
+  .then((data) => {
+    debugger;
+  }).catch((error) => {
+    console.error('Error from API:', error);
+  })
+
 });
+
+// const cardComponent = 
 
