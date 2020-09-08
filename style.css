@@ -41,6 +41,10 @@
       color: black;
     }
 
+    .hr-nav {
+      width: 85%;
+    }
+
     .active {
       color: black;
     }
@@ -63,7 +67,11 @@
       border: none;
       display:flex;
       justify-content: center;
-          
+    }
+
+    .btn-sign {
+      margin-left: 6%; 
+      padding: 3% 35%;
     }
 
     .section-one{
@@ -250,6 +258,38 @@
 
 @media (min-width: 1000px) {
     /*  DESKTOP  */
+
+    .nav-bar a.icon {
+      display: inline-block;
+    }
+
+    .nav-bar_right {
+      background-color: white;
+      border-radius: 11px 11px 11px 11px;
+    }
+
+    .nav-bar a {
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: inline-block;
+      color: grey;
+      text-align: center;
+    }
+
+    .hr-nav {
+      width: 30%;
+      color: white;
+    }
+
+    .btn-sign {
+      margin-left: 6%; 
+      padding: 1% 2%;
+    }
+
+    #btn-sign:hover {
+      background-color: #80deea;
+    }
 
     .call-action{
       display: flex;
