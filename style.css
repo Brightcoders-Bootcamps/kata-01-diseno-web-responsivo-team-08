@@ -152,14 +152,17 @@
       border-radius: 5px;
       margin-block-start: 2em;
       padding:15px 0px 15px 0px;
-      
     }
 
-    .link-here input{
+    #link{
       padding:13px 0px 13px 0px;
       font-family: 'Poppins', sans-serif;
       border-radius: 5px;
       
+    }
+
+    #one-result{
+      margin-top: 500px;
     }
 
     .div-advan {

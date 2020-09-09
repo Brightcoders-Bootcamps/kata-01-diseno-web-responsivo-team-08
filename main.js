@@ -16,20 +16,29 @@ form.addEventListener('submit', function (evento) {
   var link = document.getElementById("link").value;
   console.log(link);
 
-  fetch('https://rel.ink/api/links/',{
+  fetch('https://rel.ink/api/links/', {
     method: 'POST',
     headers: { 'Content-type': 'application/json' },
-    body: JSON.stringify({url: link}),
+    body: JSON.stringify({ url: link }),
     credentials: 'same-origin'
   })
-  .then((response) => response.json())
-  .then((data) => {
-    debugger;
-  }).catch((error) => {
-    console.error('Error from API:', error);
-  })
-
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.hashid);
+      var shortLink = 'https://rel.ink/' + data.hashid;
+      var mainContainer = document.getElementById("one-result");
+      mainContainer.insertAdjacentHTML('afterbegin', `
+      <p>${link}</p>
+      <p id="short-link">${shortLink}</p>
+      <button id="copy-button${data.hashid}" onclick="myFunction()">Copy text</button>`)
+    }).catch((error) => {
+      console.error('Error from API:', error);
+    })
 });
 
-// const cardComponent = 
+// Copy function
+function myFunction() {
+   var _shortLink = document.getElementById("short-link").innerText;
+   navigator.clipboard.writeText(_shortLink);
+}
 
