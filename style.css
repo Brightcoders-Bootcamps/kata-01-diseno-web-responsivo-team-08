@@ -169,6 +169,16 @@
       margin-bottom: 80px;
     }
 
+    .results{
+      margin-block-start: 60px;
+      }
+
+    .one-result{
+      padding: 15px 20px;
+      background: white;
+
+    }
+
     #cards {
       background-color: #eeeff4;
       display: flex;
