@@ -27,18 +27,20 @@ form.addEventListener('submit', function (evento) {
       console.log(data.hashid);
       var shortLink = 'https://rel.ink/' + data.hashid;
       var mainContainer = document.getElementById("one-result");
+      var idshort = "short-link" + data.hashid;
       mainContainer.insertAdjacentHTML('afterbegin', `
       <p>${link}</p>
-      <p id="short-link">${shortLink}</p>
-      <button id="copy-button${data.hashid}" onclick="myFunction()">Copy text</button>`)
+      <p id=${idshort}>${shortLink}</p>
+      <button id="copy-button${data.hashid}" onClick="myFunction(this)">Copy text</button>`)
     }).catch((error) => {
       console.error('Error from API:', error);
     })
 });
 
 // Copy function
-function myFunction() {
-   var _shortLink = document.getElementById("short-link").innerText;
-   navigator.clipboard.writeText(_shortLink);
+function myFunction(button) {
+  var idButton = button.id;
+  var id = idButton.slice(11);
+  navigator.clipboard.writeText('https://rel.ink/' + id);
 }
 
