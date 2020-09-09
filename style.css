@@ -129,7 +129,7 @@
 
     .link-here {
       width: 80%;
-      padding: 60px 10px 60px 10px;
+      padding: 25px 10px 25px 10px;
       background-image: url(images/bg-shorten-mobile.svg);
       background-position: top right;
       background-repeat: no-repeat;
@@ -145,25 +145,42 @@
     .inner-div{
       display: flex;
       flex-direction: column;
-      margin: 0px 30px;
+      margin: 0px 5px;
+      align-items: center;
     }
 
     .link-here button{
       border-radius: 5px;
-      margin-block-start: 2em;
-      padding:15px 0px 15px 0px;
+      margin-top: 20px;
+      padding:10px 85px;
     }
 
     #link{
-      padding:13px 0px 13px 0px;
+      padding:10px 95px 10px 0px;
       font-family: 'Poppins', sans-serif;
       border-radius: 5px;
-      
+      text-align: center;
     }
 
     #one-result{
-      margin-top: 500px;
+      padding: 25px 10px 25px 10px;
+      background: cornflowerblue;
+      margin: 30px;
     }
+
+    #one-result:nth-child(1) {
+      color: black;
+      margin: 50px;
+    }
+
+    .p-link {
+      color: black;
+    }
+
+    .p-link1 {
+      color: #2bd1d1;
+    }
+    /**/ 
 
     .div-advan {
       text-align: center;
@@ -173,13 +190,14 @@
     }
 
     .results{
-      margin-block-start: 60px;
-      }
+      margin-block-start: 200px;
+    }
+
+    
 
     .one-result{
       padding: 15px 20px;
       background: white;
-
     }
 
     #cards {
