@@ -31,7 +31,7 @@ form.addEventListener('submit', function (evento) {
         var insertHTM = `<div class="one-result">
                           <p class="p-link">${link}</p>
                           <p class="p-link1" id=${idshort}>${shortLink}</p>
-                          <button class="btn-start copy-text" id="copy-button${data.hashid}" onClick="myFunction(this)">Copy</button>
+                          <button class="btn-start copy-text" id="copy-button${data.hashid}" onClick="myFunction(this)"><p>Cop<span id="first-copy" >y</span><span id="second-copy">ied!</span></p></button>
                           </div>`;
         mainContainer.insertAdjacentHTML('afterbegin', insertHTM);
         shortlinks.push(insertHTM);
@@ -55,7 +55,17 @@ function mostrarDatos(){
 function myFunction(button) {
   var idButton = button.id;
   var id = idButton.slice(11);
+  console.log(button.id)
   navigator.clipboard.writeText('https://rel.ink/' + id);
-  
+  document.getElementById(idButton).addEventListener("click", addStyles());
+}
+
+function addStyles(){
+  console.log('Yeah')
+  // var firstCopy = document.getElementById("first-copy");
+  // firstCopy.style.visibility = 'visible';
+  var secondCopy = document.getElementById("second-copy");
+  secondCopy.style.visibility = 'visible';
+  // document.getElementById("second-copy").setAttribute("display", "inline");
 }
 
