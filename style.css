@@ -200,6 +200,9 @@
 
     .p-link {
       color: black;
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow: ellipsis;
     }
 
     .p-link1 {
