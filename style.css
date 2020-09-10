@@ -324,7 +324,7 @@
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
     /*  DESKTOP  */
 
     .nav-bar a.icon {
@@ -332,6 +332,7 @@
     }
 
     .nav-bar_right {
+      display: flex;
       background-color: white;
       border-radius: 11px 11px 11px 11px;
     }
@@ -345,11 +346,18 @@
       text-align: center;
     }
 
+    .btn-login{
+      padding: 20px;
+      margin-left: auto;
+      margin-right: 200px;
+    }
+
     .hr-nav {
       width: 30%;
       color: white;
     }
 
+    
     .btn-sign {
       margin-left: 6%; 
       padding: 1% 2%;
