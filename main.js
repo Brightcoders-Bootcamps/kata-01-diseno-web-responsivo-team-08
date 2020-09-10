@@ -42,5 +42,6 @@ function myFunction(button) {
   var idButton = button.id;
   var id = idButton.slice(11);
   navigator.clipboard.writeText('https://rel.ink/' + id);
+  
 }
 
