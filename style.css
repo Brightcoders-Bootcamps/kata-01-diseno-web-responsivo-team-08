@@ -54,22 +54,6 @@
       border-radius: 11px 11px 11px 11px;
     }
 
-    .btn-start {
-      padding: 3% 7%;
-      background-color: #2bd1d1;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-      display: block;
-      color: white;
-      border-radius: 96px 96px 96px 96px;
-      text-align: center;
-      align-content: center;
-      border: none;
-      display:flex;
-      justify-content: center;
-    }
-
     .btn-sign {
       margin-left: 6%; 
       padding: 3% 35%;
@@ -103,7 +87,6 @@
       
     }
 
-
     .title {
       font-size: 270%;
       text-align: center;
@@ -124,7 +107,7 @@
     }
 
     .btn-get{
-      padding: 7px 10px 7px 10px;
+      padding: 15px 50px;
     }
 
     .link-here {
@@ -155,6 +138,11 @@
       padding:10px 85px;
     }
 
+    #aceptar{
+      display: flex;
+      flex-direction: column;
+    }
+
     #link{
       padding:10px 95px 10px 0px;
       font-family: 'Poppins', sans-serif;
@@ -162,15 +150,48 @@
       text-align: center;
     }
 
-    #one-result{
-      padding: 25px 10px 25px 10px;
-      background: cornflowerblue;
-      margin: 30px;
+    .btn-start {
+      background-color: #2bd1d1;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      border-radius: 96px 96px 96px 96px;
+      text-align: center;
+      border: none;
     }
 
-    #one-result:nth-child(1) {
+    input:focus {
+      outline:red bold;
+      border:none
+  }
+
+    input:focus::-webkit-input-placeholder {
+      color: red;
+  }
+  
+
+    #results{
+      padding: 25px 10px 25px 10px;
+      margin: 35px 15px 0px 15px;
+    }
+
+    .one-result{
+      margin-top: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .one-result:nth-child(1) {
       color: black;
-      margin: 50px;
+      margin-top: 10px;
+    }
+
+    .copy-text {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 10px;
     }
 
     .p-link {
@@ -183,10 +204,10 @@
     /**/ 
 
     .div-advan {
-      text-align: center;
+      /* text-align: center;
       padding-top: 80px;
       margin-top: -40px;
-      margin-bottom: 80px;
+      margin-bottom: 80px; */
     }
 
     .results{
@@ -252,6 +273,11 @@
       background-image: url(images/bg-boost-mobile.svg);
       background-size: cover;
       background-color: hsl(257, 27%, 26%)
+    }
+
+    #get-started .btn-start {
+      border-radius: 96px;
+      padding: 15px 40px;
     }
 
     #footer {

@@ -26,12 +26,12 @@ form.addEventListener('submit', function (evento) {
     .then((data) => {
       console.log(data.hashid);
       var shortLink = 'https://rel.ink/' + data.hashid;
-      var mainContainer = document.getElementById("one-result");
+      var mainContainer = document.getElementById("results");
       var idshort = "short-link" + data.hashid;
-      mainContainer.insertAdjacentHTML('afterbegin', `<div id="one-result">
+      mainContainer.insertAdjacentHTML('afterbegin', `<div class="one-result">
       <p class="p-link">${link}</p>
       <p class="p-link1" id=${idshort}>${shortLink}</p>
-      <button class="btn-start" id="copy-button${data.hashid}" onClick="myFunction(this)">Copy text</button></div>`)
+      <button class="btn-start copy-text" id="copy-button${data.hashid}" onClick="myFunction(this)">Copy</button></div>`)
     }).catch((error) => {
       console.error('Error from API:', error);
     })
