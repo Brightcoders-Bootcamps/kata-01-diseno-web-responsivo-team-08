@@ -188,6 +188,10 @@
       background: white;
     }
 
+    .one-result .btn-start:hover{
+      opacity: 1;
+    }
+
     .p-link {
       color: black;
       border-bottom: 2px solid #eeeff4;
@@ -217,9 +221,6 @@
 
     .p-link {
       color: black;
-      /* overflow:hidden;
-      white-space:nowrap;
-      text-overflow: ellipsis; */
     }
 
     .p-link1 {
@@ -606,5 +607,4 @@
     .bottom-menu span:nth-child(1) {
       padding-top: 0;
     }
-    
 }
