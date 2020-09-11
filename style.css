@@ -12,6 +12,10 @@
       position: relative;
     }
 
+    .hr-menu{
+      width: 85%;
+    }
+
     .hidden {
       display: none;
     }
@@ -22,6 +26,7 @@
       display: block;
       color: white;
       text-align: center;
+      
     }
 
     .nav-bar a.icon {
@@ -30,6 +35,7 @@
       right: 0;
       top: 0;
       color: grey;
+
     }
 
     .nav-bar svg:focus{
@@ -47,11 +53,13 @@
     .nav-bar_right {
       background-color: #3a3053;
       border-radius: 11px 11px 11px 11px;
+      width: 85%;
+      margin-top: 20px;
     }
 
     .btn-sign {
       margin-left: 6%; 
-      padding: 3% 35%;
+      padding: 2% 35%;
     }
 
     .section-one{
