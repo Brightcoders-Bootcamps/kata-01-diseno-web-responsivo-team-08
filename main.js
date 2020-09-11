@@ -16,6 +16,7 @@ form.addEventListener('submit', function (evento) {
   if (link == '') {
     alert("Datos ingresados incorrectamente");
   } else {
+    // Desabilitar boton
     fetch('https://rel.ink/api/links/', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
@@ -24,6 +25,7 @@ form.addEventListener('submit', function (evento) {
     })
       .then((response) => response.json())
       .then((data) => {
+        // Ya se habilita de nuevo cuando se despasha la llamada
         console.log(data.hashid);
         var shortLink = 'https://rel.ink/' + data.hashid;
         var mainContainer = document.getElementById("results");
@@ -36,36 +38,32 @@ form.addEventListener('submit', function (evento) {
         mainContainer.insertAdjacentHTML('afterbegin', insertHTM);
         shortlinks.push(insertHTM);
         sessionStorage.setItem('linksAll', shortlinks);
-        mostrarDatos();
+        // mostrarDatos();
       }).catch((error) => {
         console.error('Error from API:', error);
       })
   }
 });
 
-function mostrarDatos(){
+window.addEventListener("load", function(event) {
   console.log('entre a mostrar datos');
   var linkss = shortlinks.toString().replace(","," ");
   console.log(linkss);
   var mainContainer = document.getElementById("results");
   mainContainer.insertAdjacentHTML('afterbegin', linkss);
-}
+});
 
 // Copy function
-function myFunction(button) {
-  var idButton = button.id;
-  var id = idButton.slice(11);
-  console.log(button.id)
+const myFunction = (button) => {
+  const idButton = button.id;
+  const id = idButton.slice(11);
+  const buttonTag = document.getElementById(idButton);
   navigator.clipboard.writeText('https://rel.ink/' + id);
-  document.getElementById(idButton).addEventListener("click", addStyles());
-}
+  addStyles(buttonTag);
+};
 
-function addStyles(){
-  console.log('Yeah')
-  // var firstCopy = document.getElementById("first-copy");
-  // firstCopy.style.visibility = 'visible';
-  var secondCopy = document.getElementById("second-copy");
-  secondCopy.style.visibility = 'visible';
+function addStyles(buttonTag){
+  buttonTag.innerHTML = 'Copied!';
   // document.getElementById("second-copy").setAttribute("display", "inline");
 }
 
