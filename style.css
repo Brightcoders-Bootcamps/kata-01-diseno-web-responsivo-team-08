@@ -385,6 +385,10 @@
       text-align: center;
     }
 
+    .nav-bar a:hover {
+      color: black;
+    }
+
     #call-to-action{
       display: flex;
       justify-content: space-evenly;
