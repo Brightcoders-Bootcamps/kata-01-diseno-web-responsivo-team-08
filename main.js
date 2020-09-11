@@ -45,7 +45,9 @@ form.addEventListener('submit', function (evento) {
         var mainContainer = document.getElementById('results');
         var idshort = 'short-link' + data.hashid;
         var insertHTM = `<div class="one-result">
+                          <div id="first-link">
                           <p class="p-link">${link}</p>
+                          </div>
                           <p class="p-link1" id=${idshort}>${shortLink}</p>
                           <button class="btn-start copy-text" id="copy-button${data.hashid}" onClick="myFunction(this)"><p>Copy</p></button>
                           </div>`;
