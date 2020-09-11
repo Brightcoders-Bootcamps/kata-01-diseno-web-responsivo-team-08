@@ -30,18 +30,13 @@
       padding: 25px;
     }
 
-
-    .marginA {
-      margin-top: 200px;
-    }
-
     .nav-bar a.icon {
       display: block;
       position: absolute;
       right: 0;
       top: 0;
       color: grey;
-
+      margin-top:-28px;
     }
 
     .nav-bar svg:focus{
@@ -49,7 +44,7 @@
     }
 
     .nav-bar a:hover {
-      color: black;
+      color: grey;
     }
 
     .active {
@@ -415,7 +410,7 @@
     }
     
     .btn-sign { 
-      padding: 1% 18%;
+      padding: 10px 25px;
       margin-left: 0%;
       margin-bottom: 0px;
       font-size: 15px;
