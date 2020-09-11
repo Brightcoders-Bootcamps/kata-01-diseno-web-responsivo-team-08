@@ -11,7 +11,7 @@ const form = document.getElementById('aceptar');
 
 form.addEventListener('submit', function (evento) {
   evento.preventDefault();
-  var link = document.getElementById("link").value;
+  var link = $("#link").val();
   console.log(link);
   if (link == '') {
     alert("Datos ingresados incorrectamente");
