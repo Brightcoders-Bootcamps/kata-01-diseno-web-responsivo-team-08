@@ -11,12 +11,24 @@ const form = document.getElementById('aceptar');
 
 form.addEventListener('submit', function (evento) {
   evento.preventDefault();
-  var link = $("#link").val();
+  var link = $('#link').val();
   console.log(link);
   if (link == '') {
-    alert("Datos ingresados incorrectamente");
+
+    document.getElementById('btnShorten').disabled=true;
+    $('#link').addClass('errorEvent');
+    var error = document.getElementById('errorMessage');
+    error.style.display = 'block';
+    setTimeout(errorMessages, 3000);
+
   } else {
-    // Desabilitar boton
+    $('#link').removeClass('errorEvent');
+    var error = document.getElementById('errorMessage');
+    error.style.display = 'none';
+    
+    //desabilitar boton
+    document.getElementById('btnShorten').disabled=true;
+    
     fetch('https://rel.ink/api/links/', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
@@ -25,31 +37,31 @@ form.addEventListener('submit', function (evento) {
     })
       .then((response) => response.json())
       .then((data) => {
-        // Ya se habilita de nuevo cuando se despasha la llamada
+        //Habilitar el boton
+        document.getElementById('btnShorten').disabled=false;
+
         console.log(data.hashid);
         var shortLink = 'https://rel.ink/' + data.hashid;
-        var mainContainer = document.getElementById("results");
-        var idshort = "short-link" + data.hashid;
+        var mainContainer = document.getElementById('results');
+        var idshort = 'short-link' + data.hashid;
         var insertHTM = `<div class="one-result">
                           <p class="p-link">${link}</p>
                           <p class="p-link1" id=${idshort}>${shortLink}</p>
-                          <button class="btn-start copy-text" id="copy-button${data.hashid}" onClick="myFunction(this)"><p>Cop<span id="first-copy" >y</span><span id="second-copy">ied!</span></p></button>
+                          <button class="btn-start copy-text" id="copy-button${data.hashid}" onClick="myFunction(this)"><p>Copy</p></button>
                           </div>`;
         mainContainer.insertAdjacentHTML('afterbegin', insertHTM);
         shortlinks.push(insertHTM);
         sessionStorage.setItem('linksAll', shortlinks);
-        // mostrarDatos();
       }).catch((error) => {
         console.error('Error from API:', error);
       })
   }
 });
 
-window.addEventListener("load", function(event) {
-  console.log('entre a mostrar datos');
-  var linkss = shortlinks.toString().replace(","," ");
+window.addEventListener('load', function(event) {
+  var linkss = shortlinks.toString().replace(',',' ');
   console.log(linkss);
-  var mainContainer = document.getElementById("results");
+  var mainContainer = document.getElementById('results');
   mainContainer.insertAdjacentHTML('afterbegin', linkss);
 });
 
@@ -64,6 +76,12 @@ const myFunction = (button) => {
 
 function addStyles(buttonTag){
   buttonTag.innerHTML = 'Copied!';
-  // document.getElementById("second-copy").setAttribute("display", "inline");
+}
+
+function errorMessages(){
+  $('#link').removeClass('errorEvent');
+  var error = document.getElementById('errorMessage');
+  error.style.display = 'none';
+  document.getElementById('btnShorten').disabled=false;
 }
 

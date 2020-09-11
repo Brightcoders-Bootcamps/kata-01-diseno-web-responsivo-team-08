@@ -31,7 +31,6 @@
         <a href="#">Login</a>
         <button class="btn-start btn-sign">Sign Up</button>
       </div>
-      <br>
     </div>
     <!-- Hamburger icon -->
     <a class="icon" id="navMenu">
@@ -59,10 +58,13 @@
   <section id="api">
     <div class="link-here">
       <form id="aceptar" action="#">
+        <div id="link-heres" style="display: flex; flex-direction: column;">
         <input id="link" type="text" placeholder="Shorten a link here...">
-        <button class="btn-start" type="submit">Shorten It!</button>
-        <!-- <span id="errorMessage" style="display: block;">Please add a link</span> -->
+        <span id="errorMessage" style="display:none !important;">Please add a link</span>
+      </div>
+      <button id="btnShorten" class="btn-start" type="submit">Shorten It!</button>
       </form>
+      <!-- <span id="errorMessage" >Please add a link</span> -->
     </div>
   </section>
 

@@ -26,7 +26,13 @@
       display: block;
       color: white;
       text-align: center;
-      
+      align-items: center;
+      padding: 25px;
+    }
+
+
+    .marginA {
+      margin-top: 200px;
     }
 
     .nav-bar a.icon {
@@ -53,13 +59,12 @@
     .nav-bar_right {
       background-color: #3a3053;
       border-radius: 11px 11px 11px 11px;
-      width: 85%;
-      margin-top: 20px;
     }
 
     .btn-sign {
       margin-left: 6%; 
-      padding: 2% 35%;
+      padding: 2% 30%;
+      margin-bottom: 40px;
     }
 
     .section-one{
@@ -143,20 +148,22 @@
       border-radius: 5px;
       text-indent:15px;
     }
-
-    /*
-    .errorEvent::placeholder {
+    
+    .errorEvent {
+      border-color: red;
       color: red;
+      
+    }
     
     #errorMessage {
       color: red;
       font-style: oblique;
-      /*margin-right: auto;
+      margin-right: auto;
       display: none;
       font-size: 10pt;
       margin-top: 10px;
     }
-    */
+    
 
     .btn-start {
       background-color: #2bd1d1;
@@ -189,6 +196,9 @@
     .p-link {
       color: black;
       border-bottom: 2px solid #eeeff4;
+      overflow:hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
     }
 
     .one-result p {
@@ -353,11 +363,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: .5em 7.5em;
-    }
-
-    .nav-bar .btn-start {
-      margin-right: 0px;
+      padding: 10px 10px;
     }
 
     #nav-bar_end{
@@ -466,6 +472,17 @@
       padding:15px 20px;
       font-size: 17px
     }
+
+    .link-here {
+      width: 80%;
+      padding: 30px 20px 30px 20px;
+      background-image: url(images/bg-boost-desktop.svg);
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-color: #342a48;
+      border-radius: 10px;
+    }
+
 
     #cards {
       padding: 1em 9em;
