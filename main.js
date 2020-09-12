@@ -1,19 +1,21 @@
-
+// Global variables
 var burgerButtton = document.getElementById("navMenu");
 var navRight = document.getElementById("navRight");
 let shortlinks = [sessionStorage.getItem('linksAll')];
+const form = document.getElementById('aceptar');
 
+// Burget button expand functionality
 burgerButtton.addEventListener("click", function () {
   navRight.classList.toggle("hidden");
 });
 
-const form = document.getElementById('aceptar');
-
+// Start of API fetch
 form.addEventListener('submit', function (evento) {
   evento.preventDefault();
   var link = $('#link').val();
   console.log(link);
-  if (link == '') {
+  
+  if (link == '') { // 'Please add link..' Animation
 
     document.getElementById('btnShorten').disabled=true;
     $('#link').addClass('errorEvent');
@@ -26,7 +28,7 @@ form.addEventListener('submit', function (evento) {
     var error = document.getElementById('errorMessage');
     error.style.display = 'none';
     
-    //desabilitar boton
+    //Disable submit button
     document.getElementById('btnShorten').disabled=true;
     
     fetch('https://rel.ink/api/links/', {
@@ -37,7 +39,7 @@ form.addEventListener('submit', function (evento) {
     })
       .then((response) => response.json())
       .then((data) => {
-        //Habilitar el boton
+        //Enable sumbit button
         document.getElementById('btnShorten').disabled=false;
 
         console.log(data.hashid);
@@ -49,7 +51,7 @@ form.addEventListener('submit', function (evento) {
                           <p class="p-link">${link}</p>
                           </div>
                           <p class="p-link1" id=${idshort}>${shortLink}</p>
-                          <button class="btn-start copy-text" id="copy-button${data.hashid}" onClick="myFunction(this)"><p>Copy</p></button>
+                          <button class="btn-start copy-text" id="copy-button${data.hashid}" onClick="copyLink(this)"><p>Copy</p></button>
                           </div>`;
         mainContainer.insertAdjacentHTML('afterbegin', insertHTM);
         shortlinks.push(insertHTM);
@@ -60,6 +62,7 @@ form.addEventListener('submit', function (evento) {
   }
 });
 
+// Save results on refresh functionality
 window.addEventListener('load', function(event) {
   var linkss = shortlinks.toString().replace(',',' ');
   console.log(linkss);
@@ -68,7 +71,7 @@ window.addEventListener('load', function(event) {
 });
 
 // Copy function
-const myFunction = (button) => {
+const copyLink = (button) => {
   const idButton = button.id;
   const id = idButton.slice(11);
   const buttonTag = document.getElementById(idButton);
@@ -76,10 +79,12 @@ const myFunction = (button) => {
   addStyles(buttonTag);
 };
 
+// Copy button, change word
 function addStyles(buttonTag){
   buttonTag.innerHTML = 'Copied!';
 }
 
+// Used for 'Please add link...'
 function errorMessages(){
   $('#link').removeClass('errorEvent');
   var error = document.getElementById('errorMessage');
